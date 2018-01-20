@@ -108,7 +108,7 @@ class TicTacToe
       return true
     elsif full? && won?
       return true
-    elsif won?(board) && !full?(board)
+    elsif won? && !full?
       return true
     else
       return false
@@ -116,9 +116,9 @@ class TicTacToe
   end
 
   def winner
-    win_combination = won?(board)
+    win_combination = won?
    if win_combination
-    return board[win_combination.first]
+    return @board[win_combination.first]
    else
      return nil
    end
