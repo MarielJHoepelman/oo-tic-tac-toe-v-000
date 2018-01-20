@@ -117,10 +117,10 @@ class TicTacToe
 
   def winner
     win_combination = won?
-   if win_combination
-    return @board[win_combination.first]
-   else
-     return nil
-   end
+    if win_combination
+      return @board[win_combination.first]
+    else
+      return nil
+    end
   end
 end
