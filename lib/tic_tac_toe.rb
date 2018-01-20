@@ -47,17 +47,17 @@ class TicTacToe
     input = gets.strip
     index = input_to_index(input)
     if valid_move?(index)
-      value = current_player(board)
-      move(board, index, value)
-      display_board(board)
+      value = current_player
+      move(index, value)
+      display_board
     else
-      turn(board)
+      turn
     end
   end
 
-  def turn_count(board)
+  def turn_count
     counter = 0
-    board.each do |playerinput|
+    @board.each do |playerinput|
       if playerinput == "X" || playerinput == "O"
         counter += 1
       end
@@ -65,8 +65,8 @@ class TicTacToe
     counter
   end
 
-  def current_player(board)
-    turn = turn_count(board)
+  def current_player
+    turn = turn_count
     turn.even? ? "X" : "O"
   end
 end
